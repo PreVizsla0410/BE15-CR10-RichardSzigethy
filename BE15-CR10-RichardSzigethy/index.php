@@ -1,5 +1,6 @@
 <?php 
 require_once 'actions/db_connect.php';
+
 $sql = "SELECT * FROM products";
 $result = mysqli_query($connect ,$sql);
 $tbody=''; //this variable will hold the body for the table
@@ -7,7 +8,7 @@ if(mysqli_num_rows($result)  > 0) {
     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){         
         $tbody .=   " 
         <tr>
-            <td> <img  src='".$row['img']."' </td>   
+            <td> <img  src='pictures/".$row['img']."' </td>   
             <td>" .$row['title']."</td>
             <td>" .$row['mediaType']."</td>
             <td>" .$row['authorLastName']."</td>
@@ -41,7 +42,13 @@ mysqli_close($connect);
         <title>Big Library</title>
         <link rel="stylesheet" href="style/index.css">
         <?php require_once 'components/boot.php'?>
-    </head>
+
+        <style>
+            img {
+width: 50px;
+            }
+ </style>
+            </head>
     <body>
     <header>
         <?php include_once 'components/navigation.php';   ?>
