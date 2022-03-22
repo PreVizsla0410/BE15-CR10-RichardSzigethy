@@ -51,7 +51,7 @@ if ($_GET['id']) {
             <table class='table  table-striped '>    
                     <tr>
                         <th>Title:</th>
-                        <td><input class='form-control' type="text" name= "title" placeholder="Title" /></td>
+                        <td><input class='form-control' type="text" name="title" value="<?php echo $title; ?>" /></td>
                     </tr>
                     <tr>
                          <th>Media type:</th>
@@ -66,31 +66,31 @@ if ($_GET['id']) {
                     </tr>
                     <tr>
                         <th>Short Description:</th>
-                        <td><input class='form-control' type="text" name="shortDescr" placeholder="Add description..." /></td>
+                        <td><input class='form-control' type="text" name="shortDescr"  value="<?php echo $description; ?>"/></td>
                     </tr>
                     <tr>
                         <th>Author Last Name:</th>
-                        <td><input class='form-control' type="text" name="authorLastName" placeholder="Author Last Name" /></td>
+                        <td><input class='form-control' type="text" name="authorLastName" value="<?php echo $authorLastName; ?>" /></td>
                     </tr>
                     <tr>
                         <th>Author First Name:</th>
-                        <td><input class='form-control' type="text" name="authorFirstName" placeholder="Author First name" /></td>
+                        <td><input class='form-control' type="text" name="authorFirstName" value="<?php echo $authorFirstName; ?>"  /></td>
                     </tr>
                     <tr>
                         <th>Publisher:</th>
-                        <td><input class='form-control' type="text" name="publisherName" placeholder="Publisher name" /></td>
+                        <td><input class='form-control' type="text" name="publisherName" value="<?php echo $publisher; ?>"  /></td>
                     </tr>
                     <tr>
                         <th>Publisher Address</th>
-                        <td><input class='form-control' type="text" name="publisherAddress" placeholder="Address" /></td>
+                        <td><input class='form-control' type="text" name="publisherAddress" value="<?php echo $publisherAddress; ?>" ></td>
                     </tr>
                     <tr>
                         <th>Published on:</th>
-                        <td><input class='form-control' type="number" min="1900" max="2099" step="1" value="2022" name="publishDate" placeholder="date" /></td>
+                        <td><input class='form-control' type="number" min="1900" max="2099" step="1" value="2022" name="publishDate" value="<?php echo $publishedOn; ?>" /></td>
                     </tr>
                     <tr>
                         <th>Image:</th>
-                        <td><input class='form-control' type="file" name="img"  placeholder="Image" /></td>
+                        <td><input class='form-control' type="file" name="img"  value="<?php echo  $fileName; ?>"  /></td>
                     </tr> 
                     <tr>
                         <th>Media Status</th>
@@ -98,13 +98,13 @@ if ($_GET['id']) {
                         <select class='form-select'  name="mediaStatus" aria-label="Default select example" >      
                                   <option selected>Availablility</option>   
                                     <option value="Available">Available</option>
-                                    <option value="Reserved">Not Available</option>       
+                                    <option value="Not Available">Not Available</option>       
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <th>ISBN Value</th>
-                        <td><input class='form-control' type="text" name="ISBN" placeholder="ISBN Number" /></td>
+                        <td><input class='form-control' type="text" name="ISBN" value="<?php echo $isbn; ?>" /></td>
                     </tr>
                     <tr>
                         <input type= "hidden" name= "id" value= "<?php echo $data['id'] ?>" />
