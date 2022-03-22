@@ -72,7 +72,7 @@
                         <select class='form-select'  name="mediaStatus" aria-label="Default select example" >      
                                   <option selected>Availablility</option>   
                                     <option value="Available">Available</option>
-                                    <option value="Reserved">Not Available</option>       
+                                    <option value="Not Available">Not Available</option>       
                             </select>
                         </td>
                     </tr>
