@@ -31,6 +31,7 @@ if(mysqli_num_rows($result)  > 0) {
     $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
 }
 
+
 mysqli_close($connect);
 ?>
 
